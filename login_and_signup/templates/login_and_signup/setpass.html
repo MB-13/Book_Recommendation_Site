@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}ShelfSense{% endblock title %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static "login_and_signup/style/setpass.css" %}">
+{% endblock stylesheet %}
+
+{% block content %}
+<div class="container">
+    <div class="image-container">
+        <img src=" {% static "login_and_signup/images/reg_img.jpeg" %} " alt="BookClub Illustration">
+    </div>
+    <div class="form-container">
+        <h2>Set Your New Password</h2> 
+
+        <form method="POST">
+            {% csrf_token %}
+            {% for field in Form %}
+                <div class="form-inputs {% if field.errors %}error-style{% endif %}">
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {{ field.errors }}
+                </div>              
+            {% endfor %}
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <button type="submit">Reset Password</button>
+        </form>
+        <p>Go To Login Page. <a href="{% url 'login' %}">Log in</a>.</p>
+    </div>
+</div>
+{% endblock content %}
+
+{% block scriptFiles %}{% endblock scriptFiles %}

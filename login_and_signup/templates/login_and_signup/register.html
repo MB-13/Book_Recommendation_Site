@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+ShelfSense
+{% endblock title %}
+
+{% block stylesheet %}
+ <link rel="stylesheet" href="{% static "login_and_signup/style/register.css" %}">
+{% endblock stylesheet %}
+
+{% block content %}
+<div class="container">
+    <div class="image-container">
+        <img src=" {% static "login_and_signup/images/reg_img.jpeg" %} " alt="BookClub Illustration">
+    </div>
+    <div class="form-container">
+        <h2>Welcome to BookClub</h2>
+        <p>Get instant access to the key takeaways from the world's most influential books ever written that are guaranteed to change your life.</p>   
+
+        <form method="POST">
+            {% csrf_token %}
+
+            {% for field in registerForm %}
+                <div class="form-inputs {% if field.errors %}error-style{% endif %}">
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {{ field.errors }}
+                </div>              
+            {% endfor %}
+            <button type="submit">Create Account</button>
+        </form>
+        <p>Already have an account? <a href="{% url 'login' %}">Log in</a>.</p>
+    </div>
+</div>
+{% endblock content %}
+
+{% block scriptFiles %}
+<script src="{% static "login_and_signup/script/register.js" %}"></script>
+{% endblock scriptFiles %}
+

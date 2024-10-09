@@ -1,0 +1,632 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}ShelfSense{% endblock title %}
+
+{% block head %}
+{% endblock head %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static "Home_Page/style/home.css" %}">
+{% endblock stylesheet %}
+
+{% block content %}
+<header>
+    <div id="header-div">
+        <h1 id="header-title" class="indie-flower-regular">SHELF SENSE</h1>
+        <p>Discover your next favorite read with ShelfSense – where every book finds its perfect reader.</p>
+    </div>
+</header>
+<nav id="nav-genre">
+    <span class="genre">All</span>
+    <span class="genre">Fiction</span>
+    <span class="genre">Non-Fiction</span>
+    <span class="genre">Comedy</span>
+    <span class="genre">Thriller</span>
+    <span class="genre">History</span>
+    <span class="genre">Children</span>
+</nav>
+<div id="main-body">
+
+    <div class="contain">
+        <div class="container-title">
+            <p class="title-para">Trending</p>
+        </div>
+        <div class="scroller-holder">
+            <button class="scroll-left" onclick="leftscroll1()">&#10094;</button>
+            <div class="container-body-1">
+        
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+                
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+            </div>
+            <button class="scroll-right" onclick="rightscroll1()">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="contain">
+        <div class="container-title">
+            <p class="title-para">Most Reads</p>
+        </div>
+        <div class="scroller-holder">
+            <button class="scroll-left" onclick="leftscroll2()">&#10094;</button>
+            <div class="container-body-2">
+        
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+                
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+    
+                <div class="card-box">
+                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                    <span class="title">
+                        name
+                    </span>
+                    <span class="author">
+                        author-name
+                    </span>
+                </div>
+            </div>
+            <button class="scroll-right" onclick="rightscroll2()">&#10095;</button>
+        </div>
+    </div>
+
+    <div id="mrb">
+        <div id="mrt">
+            <p class="title-para">Recommendation For You</p>
+        </div>
+        <div id="mrc">
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+            <div class="card-box">
+                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
+                <span class="title">
+                    name
+                </span>
+                <span class="author">
+                    author-name
+                </span>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}
+
+{% block scriptFiles %}
+    <script src="{% static "Home_Page/script/home.js" %}"></script>
+{% endblock scriptFiles %}
