@@ -5,4 +5,4 @@ from django.views import View
 class GenreView(View):
     def get(self,request,genre):
         print(genre)
-        return render(request,"Genre_Page/genre.html")
+        return render(request,"Genre_Page/genre.html",{"genre":genre})

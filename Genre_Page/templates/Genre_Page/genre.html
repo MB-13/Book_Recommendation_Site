@@ -7,7 +7,7 @@
 {% endblock head %}
 
 {% block stylesheet %}
-<link rel="stylesheet" href="{% static "Home_Page/style/home.css" %}">
+<link rel="stylesheet" href="{% static "Genre_Page/style/genre.css" %}">
 {% endblock stylesheet %}
 
 {% block content %}
@@ -33,6 +33,13 @@
 </nav>
 <div id="main-body">
 
+    <div class="genre-heading">
+        <p class="title-para">{{ genre }}</p>
+    </div>
+
+    <div class="genre-books-container">
+
+    </div>
 </div>
 
 {% endblock content %}

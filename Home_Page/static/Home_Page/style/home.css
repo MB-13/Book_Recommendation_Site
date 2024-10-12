@@ -55,7 +55,7 @@ body::-webkit-scrollbar{
     background-color: #d7cabf69;
     /* height: 100%; */
     width: 100%;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     display: flex;
     flex-direction: column;
 }
