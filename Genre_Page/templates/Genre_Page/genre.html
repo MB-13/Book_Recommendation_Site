@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}ShelfSense{% endblock title %}
+
+{% block head %}
+{% endblock head %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static "Home_Page/style/home.css" %}">
+{% endblock stylesheet %}
+
+{% block content %}
+<header>
+    <div id="header-div">
+        <h1 id="header-title" class="indie-flower-regular">SHELF SENSE</h1>
+        <p>Discover your next favorite read with ShelfSense – where every book finds its perfect reader.</p>
+    </div>
+</header>
+<nav id="nav-genre">
+    <a href=""><span class="genre">All</span></a>
+    <a href=""><span class="genre">Biography</span></a>
+    <a href=""><span class="genre">Children</span></a>
+    <a href=""><span class="genre">Fantasy</span></a>
+    <a href=""><span class="genre">Fiction</span></a>
+    <a href=""><span class="genre">History</span></a>
+    <a href=""><span class="genre">Mystery</span></a>
+    <a href=""><span class="genre">Non-fiction</span></a>
+    <a href=""><span class="genre">Romance</span></a>
+    <a href=""><span class="genre">Science</span></a>
+    <a href=""><span class="genre">Science Fiction</span></a>
+    <a href=""><span class="genre" style="border: solid 2px">Search</span></a>
+</nav>
+<div id="main-body">
+
+</div>
+
+{% endblock content %}
+
+{% block scriptFiles %}
+    <script src="{% static "Home_Page/script/home.js" %}"></script>
+{% endblock scriptFiles %}
