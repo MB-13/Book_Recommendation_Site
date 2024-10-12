@@ -71,10 +71,17 @@ body::-webkit-scrollbar{
     background-color: #d7cabf69;
 }
 
+#nav-genre a{
+    text-decoration: none;
+}
+
 .genre{
     color: #926947;
     font-weight: 600;
+    margin-left: 1rem;
+    padding: 2px;
 }
+
 
 
 .genre:hover{
@@ -200,7 +207,7 @@ body::-webkit-scrollbar{
     }
 }
 
-@media (max-width:500px){
+@media (max-width:950px){
     #nav-genre{
         flex-wrap: wrap;
     }
