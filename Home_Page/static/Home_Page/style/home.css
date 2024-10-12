@@ -210,4 +210,9 @@ body::-webkit-scrollbar{
     .scroll-left,.scroll-right{
         display: none;
     }
+    #mrc .card-box img{
+        border-radius: 1.5rem;
+        height: 300px;
+        width: 180px;
+    }
 }
