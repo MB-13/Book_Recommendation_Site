@@ -16,7 +16,7 @@
         <h2>Login to BookClub</h2>
         <p>Get instant access to the key takeaways from the world's most influential books ever written that are guaranteed to change your life.</p>   
 
-        <form method="POST" action="{% url "home" %}">
+        <form method="POST">
             {% csrf_token %}
 
             {% for field in loginForm %}
