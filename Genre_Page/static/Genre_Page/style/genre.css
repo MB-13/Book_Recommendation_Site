@@ -64,7 +64,7 @@ body::-webkit-scrollbar{
 #nav-genre{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     padding: 1rem 0rem 0.5rem 0rem;
     gap: 0.5rem;
@@ -81,6 +81,11 @@ body::-webkit-scrollbar{
     margin-left: 1rem;
     padding: 2px;
 }
+
+.genre:hover{
+    color: #664032;
+}
+
 
 .search-nav{
     border: #926947;
