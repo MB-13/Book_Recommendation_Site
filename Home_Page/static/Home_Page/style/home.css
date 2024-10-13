@@ -86,6 +86,8 @@ body::-webkit-scrollbar{
 
 .genre:hover{
     color: #664032;
+    border-bottom: #926947;
+    padding-bottom: 6px;
 }
 
 .contain{

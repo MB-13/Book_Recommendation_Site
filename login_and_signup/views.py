@@ -22,7 +22,7 @@ class UserLoginView(View):
         form = loginForm(request.POST)
         
         if form.is_valid():
-            return HttpResponseRedirect(reverse("login"))
+            return HttpResponseRedirect(reverse("home"))
         else:
             return render(request,"login_and_signup/login.html",{
                 "loginForm" : form,
