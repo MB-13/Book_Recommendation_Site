@@ -66,7 +66,7 @@ body::-webkit-scrollbar{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1rem 0rem 0.5rem 0rem;
+    padding: 1rem 0.4rem 0.5rem 0;
     gap: 0.5rem;
     background-color: #d7cabf69;
 }
@@ -165,6 +165,7 @@ body::-webkit-scrollbar{
     /* border-radius: 1.5rem; */
     height: 200px;
     width: 130px;
+    box-shadow: 5px 5px 5px #926947;
 }
 
 #mrb{
@@ -174,7 +175,7 @@ body::-webkit-scrollbar{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 1rem 0 1rem;
+    padding: 1rem 6.2rem 1rem 6.2rem;
 }
 
 #mrt{
@@ -182,6 +183,7 @@ body::-webkit-scrollbar{
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 #mrc{
@@ -192,7 +194,8 @@ body::-webkit-scrollbar{
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     row-gap: 1rem;
     column-gap: 1.27rem;
-
+    padding: 0 0.8rem 0 0.8rem;
+    
 }
 
 
@@ -206,9 +209,12 @@ body::-webkit-scrollbar{
     }
 }
 
-@media (max-width:700px){
+@media (max-width:720px){
     #header-div p{
         display: none;
+    }
+    #mrb{
+        padding: 2rem 1.2rem 0.2rem 1.2rem;
     }
 }
 
@@ -218,7 +224,7 @@ body::-webkit-scrollbar{
     }
 }
 
-@media (max-width:450px){
+@media (max-width:500px){
 
     .title-para{
         font-size: 1.8rem;

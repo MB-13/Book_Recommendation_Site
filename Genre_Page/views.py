@@ -11,7 +11,7 @@ class GenreView(View):
         
         genre_book_list = Book_Detail.objects.filter(Genre=genre.lower()).order_by('id')
         
-        paginator = Paginator(genre_book_list,40)  # Show 10 books per page
+        paginator = Paginator(genre_book_list,20)  # Show 10 books per page
         page_number = request.GET.get('page',1)
         page_obj = paginator.get_page(page_number)
         

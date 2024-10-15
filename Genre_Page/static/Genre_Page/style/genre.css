@@ -66,7 +66,7 @@ body::-webkit-scrollbar{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1rem 0rem 0.5rem 0rem;
+    padding: 1rem 0.4rem 0.5rem 0;
     gap: 0.5rem;
     background-color: #d7cabf69;
 }
@@ -121,6 +121,7 @@ body::-webkit-scrollbar{
     /* border-radius: 1.5rem; */
     height: 200px;
     width: 130px;
+    box-shadow: 5px 5px 5px #926947;
 }
 
 #gmb{
@@ -130,8 +131,9 @@ body::-webkit-scrollbar{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 2rem 1rem 0 1rem;
+    padding: 4rem 6.2rem 1rem 6.2rem;
     background-color: #d7cabf69;
+
 }
 
 #gmrt{
@@ -139,9 +141,11 @@ body::-webkit-scrollbar{
     justify-content: center;
     align-items: center;
     text-align: center;
+    /* margin-bottom: 1rem; */
 }
 
 #gmrc{
+    padding: 1rem 0.8rem 0 0.8rem;
     height: 100%;
     width: 100%;
     margin-top: 1rem;
@@ -150,6 +154,7 @@ body::-webkit-scrollbar{
     row-gap: 1rem;
     column-gap: 1.30rem;
     overflow-y: scroll;
+
 }
 
 #gmrc::-webkit-scrollbar{
@@ -166,9 +171,12 @@ body::-webkit-scrollbar{
     }
 }
 
-@media (max-width:700px){
+@media (max-width:720px){
     #header-div p{
         display: none;
+    }
+    #gmb{
+        padding: 2rem 1.2rem 0.2rem 1.2rem;
     }
 }
 
@@ -178,7 +186,7 @@ body::-webkit-scrollbar{
     }
 }
 
-@media (max-width:450px){
+@media (max-width:500px){
     #gmrc .card-box img{
         /* border-radius: 1.5rem; */
         height: 290px;
