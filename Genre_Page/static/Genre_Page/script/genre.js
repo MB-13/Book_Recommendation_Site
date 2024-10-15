@@ -11,14 +11,14 @@ if (!genre) {
     const loadingIndicator = document.getElementById('loading');
     let loading = false;
 
-    function fetchBooks(page) {
+    async function fetchBooks(page) {
         if (loading) return;
         loading = true;
         loadingIndicator.style.display = 'block';
 
         const url = `/Genre/${genre}?page=${page}`;
 
-        fetch(url, {
+        await fetch(url, {
             headers: {
                 'X-Requested-With': 'XMLHttpRequest'
             }
@@ -76,6 +76,9 @@ function adjustScrollPosition() {
         }
     }
 }
+
+
+
 
 // const params = new URLSearchParams(window.location.search);
 // // const genre = params.get('genre'); // e.g., ?genre=fiction
@@ -155,3 +158,4 @@ function adjustScrollPosition() {
 //     fetchBooks(currentPage); 
 //     window.addEventListener('scroll', handleScroll); 
 // };
+

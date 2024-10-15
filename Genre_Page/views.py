@@ -9,7 +9,10 @@ from django.http import JsonResponse
 class GenreView(View):
     def get(self,request,genre):
         
-        genre_book_list = Book_Detail.objects.filter(Genre=genre.lower()).order_by('id')
+        if genre == "All Books":
+            genre_book_list = Book_Detail.objects.all().order_by("id")   
+        else:
+            genre_book_list = Book_Detail.objects.filter(Genre=genre.lower()).order_by('id')
         
         paginator = Paginator(genre_book_list,20)  # Show 10 books per page
         page_number = request.GET.get('page',1)
