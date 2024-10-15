@@ -26,7 +26,7 @@
     <a href="{% url "Genre" genre='Fiction' %}"><span class="genre">Fiction</span></a>
     <a href="{% url "Genre" genre='History' %}"><span class="genre">History</span></a>
     <a href="{% url "Genre" genre='Mystery' %}"><span class="genre">Mystery</span></a>
-    <a href="{% url "Genre" genre='Non Fiction' %}"><span class="genre">Non-fiction</span></a>
+    <a href="{% url "Genre" genre='Non-Fiction' %}"><span class="genre">Non-fiction</span></a>
     <a href="{% url "Genre" genre='Romance' %}"><span class="genre">Romance</span></a>
     <a href="{% url "Genre" genre='Science' %}"><span class="genre">Science</span></a>
     <a href="{% url "Genre" genre='Science Fiction' %}"><span class="genre">Science Fiction</span></a>
@@ -36,19 +36,20 @@
     <div id="gmrt">
         <p class="title-para">{{ genre }}</p>
     </div>
-    <div id="gmrc">
-        {% for items in genre_book  %}
+    <div id="gmrc" id="booksContainer">
+        {% for item in page_obj  %}
         <div class="card-box">
-            <img src="{{ items.Cover_url }}" alt="">
+            <img src="{{ item.Cover_url }}" alt="{{ item.title }}" loading="lazy">
         </div>
         {% endfor %}
         
 
     </div>
+    <div id="loading" style="display: none;">Loading more books...</div>
 </div>
 
 {% endblock content %}
 
 {% block scriptFiles %}
-    <script src="{% static "Home_Page/script/home.js" %}"></script>
+    <script src="{% static "Genre_Page/script/genre.js" %}"></script>
 {% endblock scriptFiles %}

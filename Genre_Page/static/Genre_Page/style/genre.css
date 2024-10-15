@@ -149,7 +149,11 @@ body::-webkit-scrollbar{
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     row-gap: 1rem;
     column-gap: 1.30rem;
+    overflow-y: scroll;
+}
 
+#gmrc::-webkit-scrollbar{
+    display: none;
 }
 
 @media (max-width:900px){
