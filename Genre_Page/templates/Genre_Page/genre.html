@@ -37,11 +37,11 @@
         <p class="title-para">{{ genre }}</p>
     </div>
     <div id="gmrc" id="booksContainer">
-        {% for item in page_obj  %}
+        {% comment %} {% for item in page_obj  %}
         <div class="card-box">
             <img src="{{ item.Cover_url }}" alt="{{ item.title }}" loading="lazy">
         </div>
-        {% endfor %}
+        {% endfor %} {% endcomment %}
         
 
     </div>

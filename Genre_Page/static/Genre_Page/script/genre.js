@@ -1,5 +1,6 @@
 // Correctly extract the genre from the current URL path.
 const pathArray = window.location.pathname.split('/').filter(Boolean);
+// console.log(pathArray);
 const genreIndex = pathArray.indexOf("Genre") + 1; // Find the index after "Genre"
 const genre = pathArray[genreIndex];
 
@@ -11,14 +12,14 @@ if (!genre) {
     const loadingIndicator = document.getElementById('loading');
     let loading = false;
 
-    async function fetchBooks(page) {
+    function fetchBooks(page) {
         if (loading) return;
         loading = true;
         loadingIndicator.style.display = 'block';
 
         const url = `/Genre/${genre}?page=${page}`;
 
-        await fetch(url, {
+        fetch(url, {
             headers: {
                 'X-Requested-With': 'XMLHttpRequest'
             }

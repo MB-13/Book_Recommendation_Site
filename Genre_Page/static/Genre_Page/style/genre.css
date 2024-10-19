@@ -115,6 +115,7 @@ body::-webkit-scrollbar{
     align-items: center;
     justify-content: start;
     padding: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 .card-box img{
@@ -186,10 +187,29 @@ body::-webkit-scrollbar{
     }
 }
 
-@media (max-width:500px){
+@media (max-width:460px){
     #gmrc .card-box img{
-        /* border-radius: 1.5rem; */
         height: 290px;
         width: 170px;
+    }
+}
+
+@media (max-width:400px){
+    #gmrc .card-box img{
+        height: 250px;
+        width: 150px;
+    }
+    #gmrc{
+        row-gap: 0.1rem;
+    }
+}
+
+@media (max-width:367px){
+    #gmrc .card-box img{
+        height: 210px;
+        width: 130px;
+    }
+    #gmrc{
+        row-gap: 0.1rem;
     }
 }

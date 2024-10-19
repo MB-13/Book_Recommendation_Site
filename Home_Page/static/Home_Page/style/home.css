@@ -150,6 +150,13 @@ body::-webkit-scrollbar{
     overflow-y: hidden;
     scroll-behavior: smooth;
 }
+.container-body-1 .card-box{
+    margin-right: 0.6rem;
+}
+
+.container-body-2 .card-box{
+    margin-right: 0.6rem;
+}
 
 .card-box{
     width: 100%;
@@ -234,7 +241,50 @@ body::-webkit-scrollbar{
     }
     #mrc .card-box img{
         /* border-radius: 1.5rem; */
-        height: 280px;
+        height: 220px;
+        width: 120px;
+    }
+}
+
+@media (max-width:460px){
+    #mrc .card-box img{
+        height: 290px;
         width: 170px;
+    }
+}
+
+@media (max-width:400px){
+    #mrc .card-box img{
+        height: 250px;
+        width: 150px;
+    }
+    #mrc{
+        row-gap: 0.5rem;
+    }
+}
+
+@media (max-width:367px){
+    #mrc .card-box img{
+        height: 210px;
+        width: 130px;
+    }
+    #mrc{
+        row-gap: 0.5rem;
+    }
+}
+
+@media (max-width:642px){
+    #mrb{
+        margin-top: 0.6rem;
+    }
+}
+
+@media (max-width:500px){
+    #mrb{
+        margin-top: 0.3rem;
+        
+    }
+    #mrt{
+        margin-bottom: 0.3rem;
     }
 }
