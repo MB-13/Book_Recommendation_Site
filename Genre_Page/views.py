@@ -8,7 +8,6 @@ from django.http import JsonResponse
 
 class GenreView(View):
     def get(self,request,genre):
-        
         if genre == "All Books":
             genre_book_list = Book_Detail.objects.all().order_by("id")   
         else:
