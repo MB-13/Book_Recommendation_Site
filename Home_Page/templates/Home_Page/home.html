@@ -109,62 +109,14 @@
         <div class="scroller-holder">
             <button class="scroll-left" onclick="leftscroll2()">&#10094;</button>
             <div class="container-body-2">
-        
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
                 
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
+                {% for book in top_500 %}
+                    <div class="card-box">
+                        <img src="{{book.Cover_url}}" alt="{{book.Title}}">
+                    </div>
+                {% endfor %}
+                
+                
             </div>
             <button class="scroll-right" onclick="rightscroll2()">&#10095;</button>
         </div>
