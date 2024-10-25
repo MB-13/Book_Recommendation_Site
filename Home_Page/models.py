@@ -33,5 +33,5 @@ class Book_Detail(models.Model):
         return f"{self.Title}"
     
     def save(self,*args, **kwargs):
-        self.weighted_avg = ((self.Rating * self.Rating_Count) + (self.nor_mean*self.rate_mean)) / (self.Rating_Count + self.nor_mean)
+        self.weighted_avg = (self.Rating + 0.00001)*((self.Rating_Count + 0.0001)/self.nor_mean)
         super(Book_Detail,self).save(*args, **kwargs)
