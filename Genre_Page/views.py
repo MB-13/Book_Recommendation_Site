@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import View
-from Home_Page.models import Book_Detail
+from Home_Page.models import Book_Detail,Book_Detail_2
 
 from django.core.paginator import Paginator
 from django.http import JsonResponse
@@ -9,7 +9,7 @@ from django.http import JsonResponse
 class GenreView(View):
     def get(self,request,genre):
         if genre == "All Books":
-            genre_book_list = Book_Detail.objects.all().order_by("id")   
+            genre_book_list = Book_Detail_2.objects.all().order_by("id")   
         else:
             genre_book_list = Book_Detail.objects.filter(Genre=genre.lower()).order_by('id')
         

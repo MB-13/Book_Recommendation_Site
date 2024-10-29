@@ -36,67 +36,16 @@
 
     <div class="contain">
         <div class="container-title">
-            <p class="title-para">Trending</p>
+            <p class="title-para">Most Reads</p>
         </div>
         <div class="scroller-holder">
             <button class="scroll-left" onclick="leftscroll1()">&#10094;</button>
             <div class="container-body-1">
-        
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-                
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
-    
-                <div class="card-box">
-                    <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-                </div>
+                {% for book in top_500 %}
+                    <div class="card-box">
+                        <img src="{{book.Cover_url}}" alt="{{book.Title}}">
+                    </div>
+                {% endfor %}
             </div>
             <button class="scroll-right" onclick="rightscroll1()">&#10095;</button>
         </div>
@@ -104,18 +53,11 @@
 
     <div class="contain">
         <div class="container-title">
-            <p class="title-para">Most Reads</p>
+            <p class="title-para">Best Seller Of All Time</p>
         </div>
         <div class="scroller-holder">
             <button class="scroll-left" onclick="leftscroll2()">&#10094;</button>
             <div class="container-body-2">
-                
-                {% for book in top_500 %}
-                    <div class="card-box">
-                        <img src="{{book.Cover_url}}" alt="{{book.Title}}">
-                    </div>
-                {% endfor %}
-                
                 
             </div>
             <button class="scroll-right" onclick="rightscroll2()">&#10095;</button>
