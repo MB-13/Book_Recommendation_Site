@@ -11,7 +11,8 @@ class GenreView(View):
         if genre == "All Books":
             genre_book_list = Book_Detail_2.objects.all().order_by("id")   
         else:
-            genre_book_list = Book_Detail.objects.filter(Genre=genre.lower()).order_by('id')
+            # genre_book_list = Book_Detail.objects.filter(Genre=genre.lower()).order_by('id')
+            genre_book_list =  Book_Detail_2.objects.filter(Genre__icontains=genre.lower())
         
         paginator = Paginator(genre_book_list,20)  # Show 10 books per page
         page_number = request.GET.get('page',1)

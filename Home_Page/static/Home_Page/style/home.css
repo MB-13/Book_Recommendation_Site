@@ -69,6 +69,7 @@ body::-webkit-scrollbar{
     padding: 1rem 0.4rem 0.5rem 0;
     gap: 0.5rem;
     background-color: #d7cabf69;
+    flex-wrap: wrap;
 }
 
 #nav-genre a{
