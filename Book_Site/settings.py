@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "login_and_signup",
     "Home_Page",
     "Genre_Page",
+    "Book_Detail_Page",
 ]
 
 MIDDLEWARE = [
