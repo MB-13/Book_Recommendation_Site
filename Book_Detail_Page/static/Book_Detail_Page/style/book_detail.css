@@ -83,6 +83,165 @@ body::-webkit-scrollbar{
     padding: 4px;
 }
 
+.detail_container{
+    padding: 2rem;
+    /* padding-bottom: 1.5rem; */
+    height: 100%;
+    width: 100vw;
+    background-color: #d7cabf69;
+}
+
+.capsul{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    /* border-radius: 2rem; */
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(198, 144, 91, 0.167);
+    height: 100%;
+    padding: 2rem
+}
+
+
+.book_img img{
+    height: 80%;
+    width: 300px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    /* border-radius: 2rem; */
+    /* border: 1px solid black; */
+    margin: 0 2rem 0 2rem;
+    /* background-color: aqua; */
+    position:static;
+}
+
+.book_detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: 60vh;
+    width: 100%;
+    /* background-color: aqua; */
+    margin-left: 1rem;
+    overflow-y: scroll;
+    padding-right: 1rem;
+}
+
+  /* Custom scrollbar styles */
+  .book_detail::-webkit-scrollbar {
+    width: 8px;  /* Set the width of the scrollbar */
+    height: 2px; /* Set the height of the horizontal scrollbar */
+  }
+  
+  .book_detail::-webkit-scrollbar-track {
+    background-color: #f4f4f4; /* Light gray background for the track */
+    border-radius: 10px;  /* Rounded corners for the scrollbar track */
+  }
+  
+  .book_detail::-webkit-scrollbar-thumb {
+    background-color: #00bfff; /* Neon blue color for the thumb */
+    border-radius: 10px;  /* Rounded thumb */
+    border: 2px solid #fff; /* Optional white border around the thumb */
+
+  }
+  
+  .book_detail::-webkit-scrollbar-thumb:active {
+    background-color: #1e90ff; /* Slightly darker blue when active */
+  }
+  
+  .book_detail::-webkit-scrollbar-corner {
+    background-color: transparent; /* Optional: remove corner background */
+  }
+  
+
+
+
+
+.bkt{
+    font-family: Copernicus,Libre Baskerville,Georgia,serif;
+    font-size: 2.5rem;
+    /* font-weight: 600; */
+    /* font-size: 2em; */
+    color: #5c3d2e;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+
+.bk-gen{
+    /* color: red; */
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-family: Copernicus,Libre Baskerville,Georgia,serif;
+    margin-bottom: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.bk-gen span{
+    margin-right: 1rem;
+}
+
+.author{
+    /* font-size: 1.25rem; */
+    color: #5c3d2e;
+    font-style: italic;
+    /* margin-bottom: 15px; */
+}
+
+.rating,.rating_count{
+    font-size: 1.1em;
+    color: #c66b3d;
+    font-weight: bold;
+}
+
+.description{
+    font-size: 1em;
+    color: #444;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.pub_year{
+    font-size: 1em;
+    color: #666;
+    font-weight: normal;
+    /* margin-top: 5px;
+    margin-bottom: 0.5rem; */
+}
+
+.Genre{
+    font-size: 1em;
+    color: #666;
+    font-weight: normal;
+    /* margin-top: 15px;
+    margin-bottom: 0.5rem; */
+}
+
+.bk-info{
+    color: #664032;
+    font-style: italic;
+    font-weight: 500;
+    text-shadow: 0 1px 4px #666;
+    font-size: 1.5rem;
+}
+
+
+.review_section{
+    height: 100%;
+    width: 100%;
+    background-color: #d7cabf69;
+    padding: 6rem;
+    padding-top: 0;
+}
+
+.rev_cont{
+    height: 3rem;
+    width: 100%;
+    background-color: white;
+}
 @media (max-width:900px){
     #header-div{
         background-size: cover;
@@ -104,5 +263,3 @@ body::-webkit-scrollbar{
         flex-wrap: wrap;
     }
 }
-
-
