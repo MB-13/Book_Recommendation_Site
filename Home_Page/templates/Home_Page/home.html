@@ -45,9 +45,11 @@
             <button class="scroll-left" onclick="leftscroll1()">&#10094;</button>
             <div class="container-body-1">
                 {% for book in top_500 %}
-                    <div class="card-box">
-                        <img src="{{book.Cover_url}}" alt="{{book.Title}}">
-                    </div>
+                    <a href="{% url "book" Id=book.id %}">
+                        <div class="card-box">
+                            <img src="{{book.Cover_url}}" alt="{{book.Title}}">
+                        </div>
+                    </a>
                 {% endfor %}
             </div>
             <button class="scroll-right" onclick="rightscroll1()">&#10095;</button>
@@ -62,9 +64,11 @@
             <button class="scroll-left" onclick="leftscroll2()">&#10094;</button>
             <div class="container-body-2">
                 {% for book in bestseller %}
+                <a href="{% url "bestseller" Id=book.id %}">
                     <div class="card-box">
                         <img src="{{book.Cover_url}}" alt="{{book.Title}}">
                     </div>
+                </a>
                 {% endfor %}
             </div>
             <button class="scroll-right" onclick="rightscroll2()">&#10095;</button>

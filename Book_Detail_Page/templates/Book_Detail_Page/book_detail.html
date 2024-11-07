@@ -38,33 +38,18 @@
 <div class="detail_container">
     <div class="capsul">
         <div class="book_img">
-            <img src="{% static 'Book_Detail_Page/images/b1.jpg' %}" alt="">
+            <img src="{{image_url}}" alt="{[title}}">
         </div>
         <div class="book_detail">
             <div class="bkt">
-                Harry Potter and the Order of the Phoenix
+                {{ title }}
             </div>
-            <div class="author bk-gen"><span class="bk-info">Author:</span>J.K. Rowling</div>
-            <div class="rating bk-gen"><span class="bk-info">Rating:</span>4.5/5</div>
-            <div class="rating_count bk-gen"><span class="bk-info">Total Rating:</span>123234</div>
-            <div class="Genre bk-gen"><span class="bk-info">Genres:</span>Fantasy, Young Adult, Fiction, Magic, Childrens, Audiobook, Adventure </div>
-            <div class="pub_year bk-gen"><span class="bk-info">Publication year:</span>2003</div>
-            <div class="description bk-gen"><span class="bk-info">Description:</span>Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ea rerum earum fugit explicabo similique. Obcaecati excepturi beatae, fugit delectus illum accusamus a explicabo inventore iusto iste eaque et ullam.
-            Assumenda excepturi nulla commodi praesentium labore fugiat reiciendis aliquam nostrum temporibus velit possimus culpa voluptatibus fugit magnam, vel, eligendi non impedit similique repudiandae nobis repellat minus quam magni. Nihil, debitis.
-            Inventore libero at dicta. Harum quas tempora deserunt nulla, hic corporis explicabo ipsum quidem molestiae officiis quo, soluta vel dolor ratione in impedit excepturi beatae dolores? Delectus quasi vero veniam.
-            Natus praesentium consequuntur, deleniti, provident optio id, minima voluptas ducimus suscipit soluta at quos odio dolor repellat. Reprehenderit, tempora! Sapiente distinctio iusto odio sit amet quos sed enim assumenda est?
-            Dignissimos, quisquam et! Similique, accusamus? Hic nesciunt quod quisquam velit dolorum laborum consequuntur earum nemo illum nisi ullam magni fuga, molestiae qui sequi et in esse odit. Magni, quo iusto.
-            Autem vel sit quasi officiis quod nostrum nobis debitis assumenda ipsa dolores error, totam aperiam animi optio maiores. Consequuntur qui, aut illum ducimus dignissimos maxime eius molestias quaerat deserunt labore?
-            Neque ipsa illo cum, eaque facere, laboriosam quas quae eligendi voluptates id error nulla enim delectus officiis animi odit illum, ex nemo corporis veritatis? Inventore provident laboriosam nemo cupiditate necessitatibus?
-            Saepe minus totam deserunt iure accusantium dolorum quidem quibusdam facilis earum possimus voluptates, molestiae fugit tempore soluta nostrum sapiente nesciunt debitis quisquam veritatis a ratione ducimus. Obcaecati optio mollitia iure.
-            Quia corporis placeat provide Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi quam eos et aut similique officia dolores, quidem cumque! Ducimus, tempore! Amet necessitatibus animi quibusdam, perferendis perspiciatis repellendus laborum quae veniam!
-            Non tempore quod mollitia asperiores est magnam expedita nihil pariatur aliquam iste dolorum veniam ipsam veritatis, rerum facilis, optio ratione eius eaque! Ipsum maiores non dolorem quisquam iste exercitationem eveniet?
-            Porro, suscipit asperiores. Quidem sapiente eos in at velit, explicabo voluptates tempore? Exercitationem totam recusandae officia voluptatem ab corrupti impedit mollitia ullam dolores perferendis? Dignissimos ullam quia temporibus fuga similique.
-            Accusantium quos amet sapiente nobis omnis ullam est voluptatem at, aliquid minima fuga blanditiis a fugiat. Ipsam nihil placeat odio soluta iste tempore quidem ab nesciunt, dicta dolores, animi quod!
-            Reiciendis adipisci mollitia velit vero repellat veritatis ipsum, veniam minus beatae explicabo dicta nesciunt libero. Ea in, temporibus consectetur provident fugiat distinctio dolorum quibusdam ab consequatur. Unde, tenetur repellendus. Voluptatibus.nt natus, fugit pariatur iure itaque sunt et consequatur eligendi dignissimos odit! Libero, rerum ad? Velit qui ab modi ullam libero odio quaerat dignissimos fuga quam recusandae.
-            Quo voluptatem sint explicabo sed atque, non similique esse cum, odit, ullam minus illum modi quia ea fuga expedita fugit ex consectetur! Expedita quis neque molestias aut sed quas quasi. ipsum dolor Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum odio impedit sapiente id atque ducimus, facere quam placeat reprehenderit at dolorum inventore itaque et expedita quia consequatur mollitia maxime architecto. sit amet, consectetur adipisicing elit. Veniam neque eos non. Dolore laborum nobis quis cumque officia aut beatae similique quibusdam quos deserunt magni rerum, laboriosam error dignissimos at.
-            Corporis sunt tenetur possimus at et temporibus. Quisquam porro necessitatibus est facere incidunt aliquam totam, explicabo labore voluptatibus placeat laudantium. Ducimus maxime ut iure est, laboriosam nisi nulla minus nihil?</div>
-
+            <div class="author bk-gen"><span class="bk-info">Author:</span>{{ author }}</div>
+            <div class="rating bk-gen"><span class="bk-info">Rating:</span>{{ rating }}/5</div>
+            <div class="rating_count bk-gen"><span class="bk-info">Total Rating:</span>{{ rating_count}}</div>
+            <div class="Genre bk-gen"><span class="bk-info">Genres:</span>{{ genres}}</div>
+            <div class="pub_year bk-gen"><span class="bk-info">Publication year:</span>{{ pub_year}}</div>
+            <div class="description bk-gen"><span class="bk-info">Description:</span>{{ description}}</div>
         </div>
     </div>
 </div>

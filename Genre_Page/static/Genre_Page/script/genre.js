@@ -10,6 +10,9 @@ if (!genre) {
     let currentPage = 1;
     const booksContainer = document.getElementById('gmrc');
     const loadingIndicator = document.getElementById('loading');
+    // const bookurlspan = document.getElementById('spanforbookurl');
+    // book_detail_url = bookurlspan.getAttribute('data-url');
+    // console.log(book_detail_url);
     let loading = false;
 
     function fetchBooks(page) {
@@ -32,12 +35,15 @@ if (!genre) {
                 return;
             }
             data.books.forEach(book => {
+                const bookancor = document.createElement('a');
                 const bookElement = document.createElement('div');
                 bookElement.className = 'card-box';
                 bookElement.innerHTML = `
                     <img src="${book.Cover_url}" alt="${book.title}" loading="lazy">
                 `;
-                booksContainer.appendChild(bookElement);
+                bookancor.appendChild(bookElement)
+                bookancor.setAttribute('href',`/book/${book.id}`)
+                booksContainer.appendChild(bookancor);
             });
             currentPage++;
         })
