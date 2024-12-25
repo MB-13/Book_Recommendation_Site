@@ -122,10 +122,9 @@ Book_Site/
 
 [Watch the video](demo/Demo-video.mp4)
 
-<video width="640" height="360" controls>
-  <source src="https://github.com/MB-13/Book_Site/blob/a0eb755bfc9eba40372cfc8c63656723602636fa/demo/Demo-video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/e2adbbd8-812b-4f89-9981-7d61fd7e583a
+
+
 
 
 ---
