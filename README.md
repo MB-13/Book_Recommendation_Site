@@ -120,15 +120,10 @@ Book_Site/
 
 ## 🎥 Demo
 
-### 🎬 Video:
-Embed a demo video or provide a link to demonstrate the features and user experience of the site.
 
-```html
 <video controls style="width:100%; max-width:600px;">
-  <source src="/path/to/your/demo_video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
+  <source src="demo/Demo-video.mp4" type="video/mp4">
 </video>
-```
 
 ---
 
