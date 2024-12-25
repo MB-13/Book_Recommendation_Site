@@ -2,12 +2,9 @@
 
 Welcome to the **Book Recommendation Site** repository! This project is a full-stack web-based application developed using **Django**. It is designed to provide users with personalized book recommendations, embedding-based search capabilities, real-time search suggestions, and dynamic content loading. The application utilizes **SBERT** (Sentence-BERT) and the **SentenceTransformer** library for advanced natural language processing.
 
-### 🖼 Images:
-Add screenshots of your site in this section to showcase its functionality and design.
+<p> <img src="demo/Screenshot (7).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/> <img src="demo/Screenshot (8).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/></p>
 
-<p align="center> <img src="demo/Screenshot (7).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/> <img src="demo/Screenshot (8).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/></p>
-
-<p align="center"> <img src="demo/Screenshot (9).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/> <img src="demo/Screenshot (10).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/></p>
+<p> <img src="demo/Screenshot (9).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/> <img src="demo/Screenshot (10).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/></p>
 
 
 ---
