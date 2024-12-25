@@ -22,6 +22,8 @@ class UserLoginView(View):
         form = loginForm(request.POST)
         
         if form.is_valid():
+            mail = form.cleaned_data["email"]
+            request.session['user_id'] = str(userInfo.objects.get(emailAddress = mail).userId)
             return HttpResponseRedirect(reverse("home"))
         else:
             return render(request,"login_and_signup/login.html",{

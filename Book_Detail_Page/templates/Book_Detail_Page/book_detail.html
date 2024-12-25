@@ -15,6 +15,7 @@
     <div id="header-div">
         <h1 id="header-title" class="indie-flower-regular">SHELF SENSE</h1>
         <p>Discover your next favorite read with ShelfSense – where every book finds its perfect reader.</p>
+        <a href="{%url "login" %}"><div class="logout">LOG OUT!</div></a>
     </div>
 </header>
 <nav id="nav-genre">
@@ -35,6 +36,8 @@
     <a href="{% url "Genre" genre='Science Fiction' %}"><span class="genre">Science Fiction</span></a>
     <a href="{% url "Genre" genre='All Books' %}"><span class="genre search-nav" style="border: solid 2px">Search</span></a>
 </nav>
+
+
 <div class="detail_container">
     <div class="capsul">
         <div class="book_img">
@@ -53,16 +56,35 @@
         </div>
     </div>
 </div>
-{% comment %} <div class="review_section">
-    <div class="rev_cont">
-        like dislike 
+
+<div class="recom-section">
+    <div class="recom-container">
+        <div class="recom-title">Related Books</div>
+        <div class="recom-books">
+
+            {% for book in recom_book_list %}
+
+                <div class="pm-div">
+                    <a href="{% url "book" Id=book.id %}">
+                        <div class="card-box">
+                            <img src="{{book.Cover_url}}" alt="{{book.Title}}">
+                        </div>
+                    </a>
+                    <span class="plus-span" data-id="{{book.id}}">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" id="Plus">
+                            <path d="M3 0v3H0v2h3v3h2V5h3V3H5V0H3z" fill="#595bd4" class="color000000 svgShape"></path>
+                        </svg>                                         
+                    </span>
+                </div>
+
+            {% endfor %}
+
+        </div>
     </div>
-</div> {% endcomment %}
-<div class="recom-container">
     
 </div>
 {% endblock content %}
 
 {% block scriptFiles %}
-    <script src="{% static "Home_Page/script/home.js" %}"></script>
+    <script src="{% static "Book_Detail_Page/script/book_detail.js" %}"></script>
 {% endblock scriptFiles %}

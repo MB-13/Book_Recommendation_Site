@@ -24,7 +24,6 @@ class GenreView(View):
                 'books':books_data,
                 'has_next': page_obj.has_next()
             })
-        
         return render(request,"Genre_Page/genre.html",{"genre":genre,'page_obj':page_obj})
 
 # class BookListView(View):

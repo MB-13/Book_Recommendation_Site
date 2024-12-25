@@ -15,8 +15,11 @@
     <div id="header-div">
         <h1 id="header-title" class="indie-flower-regular">SHELF SENSE</h1>
         <p>Discover your next favorite read with ShelfSense – where every book finds its perfect reader.</p>
+        <a href="{%url "login" %}"><div class="logout">LOG OUT!</div></a>
     </div>
+
 </header>
+
 <nav id="nav-genre">
     <a href="{% url "home" %}"><span class="genre">Home</span></a>
     <a href="{% url "Genre" genre='All Books' %}"><span class="genre">All</span></a>
@@ -33,7 +36,7 @@
     <a href="{% url "Genre" genre='NonFiction' %}"><span class="genre">Non-fiction</span></a>
     <a href="{% url "Genre" genre='Romance' %}"><span class="genre">Romance</span></a>
     <a href="{% url "Genre" genre='Science Fiction' %}"><span class="genre">Science Fiction</span></a>
-    <a href="{% url "Genre" genre='All Books' %}"><span class="genre search-nav" style="border: solid 2px">Search</span></a>
+    <a href="{% url "search" %}"><span class="genre search-nav" style="border: solid 2px">Search</span></a>
 </nav>
 <div id="main-body">
 
@@ -43,13 +46,22 @@
         </div>
         <div class="scroller-holder">
             <button class="scroll-left" onclick="leftscroll1()">&#10094;</button>
-            <div class="container-body-1">
+            <div id="container-body-1" class="container-body">
                 {% for book in top_500 %}
-                    <a href="{% url "book" Id=book.id %}">
-                        <div class="card-box">
-                            <img src="{{book.Cover_url}}" alt="{{book.Title}}">
-                        </div>
-                    </a>
+
+                    <div class="pm-div">
+                        <a href="{% url "book" Id=book.id %}">
+                            <div class="card-box">
+                                <img src="{{book.Cover_url}}" alt="{{book.Title}}">
+                            </div>
+                        </a>
+                        <span class="plus-span linear_span" data-id = {{book.id}}>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" id="Plus">
+                                <path d="M3 0v3H0v2h3v3h2V5h3V3H5V0H3z" fill="#595bd4" class="color000000 svgShape"></path>
+                            </svg>                                          
+                        </span>
+                    </div>
+
                 {% endfor %}
             </div>
             <button class="scroll-right" onclick="rightscroll1()">&#10095;</button>
@@ -62,16 +74,49 @@
         </div>
         <div class="scroller-holder">
             <button class="scroll-left" onclick="leftscroll2()">&#10094;</button>
-            <div class="container-body-2">
+            <div id="container-body-2" class="container-body">
                 {% for book in bestseller %}
-                <a href="{% url "bestseller" Id=book.id %}">
-                    <div class="card-box">
-                        <img src="{{book.Cover_url}}" alt="{{book.Title}}">
-                    </div>
-                </a>
+                <div class="pm-div">
+                    <a href="{% url "bestseller" Id=book.id %}">
+                        <div class="card-box">
+                            <img src="{{book.Cover_url}}" alt="{{book.Title}}">
+                        </div>
+                    </a>
+                    <span class='plus-span linear_span' data-id = {{book.id}}>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" id="Plus">
+                            <path d="M3 0v3H0v2h3v3h2V5h3V3H5V0H3z" fill="#595bd4" class="color000000 svgShape"></path>
+                          </svg>                                          
+                    </span>
+                </div>
                 {% endfor %}
             </div>
             <button class="scroll-right" onclick="rightscroll2()">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="contain">
+        <div class="container-title">
+            <p class="title-para">Your Future Reads</p>
+        </div>
+        <div class="scroller-holder">
+            <button class="scroll-left" onclick="leftscroll3()">&#10094;</button>
+            <div id="container-body-3" class="container-body">
+                {% for book in my_future_read %}
+                <div class="pm-div" data-id-div = {{book.id}}>
+                    <a href="{% url "bestseller" Id=book.id %}">
+                        <div class="card-box">
+                            <img src="{{book.Cover_url}}" alt="{{book.Title}}">
+                        </div>
+                    </a>
+                    <span class='cross-span linear_span' data-id = {{book.id}}>
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 32 32" viewBox="0 0 32 32" id="cross">
+                            <path d="M31.5,2.42828c0-0.51752-0.20148-1.00427-0.56763-1.36987c-0.73224-0.73224-2.00751-0.73224-2.73975,0L16,13.25104L3.80737,1.05841c-0.73224-0.73224-2.00751-0.73224-2.73975,0C0.70154,1.42401,0.5,1.91077,0.5,2.42828c0,0.51746,0.20154,1.00421,0.56763,1.36987l12.19263,12.19263L1.06763,28.18341C0.70154,28.54901,0.5,29.03577,0.5,29.55328c0,0.51746,0.20154,1.00421,0.56763,1.36987c0.73224,0.73224,2.00751,0.73224,2.73975,0L16,18.73053l12.19263,12.19263c0.36615,0.36609,0.85242,0.56763,1.36987,0.56763c0.51752,0,1.00378-0.20154,1.36987-0.56763C31.29852,30.5575,31.5,30.07074,31.5,29.55328c0-0.51752-0.20148-1.00427-0.56763-1.36987L18.73975,15.99078L30.93237,3.79816C31.29852,3.4325,31.5,2.94574,31.5,2.42828z" fill="#595bd4" class="color000000 svgShape"></path>
+                        </svg>                                        
+                    </span>
+                </div>
+                {% endfor %}
+            </div>
+            <button class="scroll-right" onclick="rightscroll3()">&#10095;</button>
         </div>
     </div>
 
@@ -80,119 +125,21 @@
             <p class="title-para">Recommendation For You</p>
         </div>
         <div id="mrc">
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
             
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-            
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b2.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-            <div class="card-box">
-                <img src="{% static "Home_Page/images/books/b1.jpg" %}" alt="">
-            </div>
-
-
+            {% for book in user_recom_books %}
+                <div class="pm-div">
+                    <a href="{% url "bestseller" Id=book.id %}">
+                        <div class="card-box">
+                            <img src="{{book.Cover_url}}" alt="{{book.Title}}">
+                        </div>
+                    </a>
+                    <span class='plus-span' data-id = {{book.id}}>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" id="Plus">
+                            <path d="M3 0v3H0v2h3v3h2V5h3V3H5V0H3z" fill="#595bd4" class="color000000 svgShape"></path>
+                        </svg>                                          
+                    </span>
+                </div>
+            {% endfor %}
 
         </div>
     </div>

@@ -16,11 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from Home_Page.views import AddFutureReadView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("",include("login_and_signup.urls")),
     path("home/",include("Home_Page.urls")),
     path("Genre/",include("Genre_Page.urls")),
-    path("book/",include("Book_Detail_Page.urls"))
+    path("book/",include("Book_Detail_Page.urls")),
+    path("search/",include("Search_Page.urls")),
 ]

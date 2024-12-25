@@ -35,6 +35,25 @@ if (!genre) {
                 return;
             }
             data.books.forEach(book => {
+
+                const pmdiv = document.createElement('div');
+                const pmdivspan = document.createElement('span');
+                pmdivspan.className = 'plus-span';
+                pmdivspan.setAttribute("data-id",`${book.id}`);
+                pmdivspan.addEventListener('click',()=>{
+                    fetch(`add-to-frl/?q=${parseInt(book.id)-1}`)
+                    .then(response => {
+                        if(!response.ok){
+                            throw new Error("Book Not Added");
+                        }
+                        console.log("addedq");
+                    })
+                    .catch(Error => console.log("Error : ",Error));
+                })
+            
+                pmdiv.className = 'pm-div';
+                pmdivspan.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" id="Plus"><path d="M3 0v3H0v2h3v3h2V5h3V3H5V0H3z" fill="#595bd4" class="color000000 svgShape"></path></svg>'
+
                 const bookancor = document.createElement('a');
                 const bookElement = document.createElement('div');
                 bookElement.className = 'card-box';
@@ -43,7 +62,10 @@ if (!genre) {
                 `;
                 bookancor.appendChild(bookElement)
                 bookancor.setAttribute('href',`/book/${book.id}`)
-                booksContainer.appendChild(bookancor);
+                pmdiv.appendChild(bookancor)
+                pmdiv.appendChild(pmdivspan)
+                booksContainer.appendChild(pmdiv);
+                
             });
             currentPage++;
         })
@@ -84,85 +106,16 @@ function adjustScrollPosition() {
     }
 }
 
-
-
-
-// const params = new URLSearchParams(window.location.search);
-// // const genre = params.get('genre'); // e.g., ?genre=fiction
-
-// let currentPage = 1; 
-// const booksContainer = document.getElementById('gmrc');
-// let loading = false; 
-
-// function fetchBooks(page) {
-//     if (loading) return; // Prevent duplicate fetch calls
-//     loading = true;
-
-//     const url = `/Genre/${genre}?page=${page}`;
-
-//     console.log(`Fetching books from: ${url}`); // Debugging log
-
-//     fetch(url, {
-//         headers: {
-//             'X-Requested-With': 'XMLHttpRequest' // Specify this as an AJAX request
-//         }
-//     })
-//         .then(response => {
-//             if (!response.ok) {
-//                 throw new Error('Network response was not ok');
-//             }
-//             return response.json();
-//         })
-//         .then(data => {
-//             console.log(`Received ${data.books.length} books`); // Debugging log
-//             if (data.books.length === 0) {
-//                 window.removeEventListener('scroll', handleScroll);
-//                 return;
-//             }
-//             data.books.forEach(book => {
-//                 const bookElement = document.createElement('div');
-//                 bookElement.className = 'card-box';
-//                 bookElement.innerHTML = `
-//                     <img src="${book.Cover_url}" alt="${book.title}" loading="lazy">
-//                 `;
-//                 booksContainer.appendChild(bookElement);
-//             });
-//             adjustScrollPosition(); // Adjust scroll after loading new books
-//             currentPage++; 
-//         })
-//         .catch(error => {
-//             console.error('Error fetching books:', error);
-//             booksContainer.innerHTML = '<p>Failed to load books. Please try again later.</p>';
-//         })
-//         .finally(() => {
-//             loading = false; 
-//         });
-// }
-
-// function adjustScrollPosition() {
-//     const lastBook = booksContainer.lastElementChild; // Get the last book element
-
-//     if (lastBook) {
-//         const lastBookRect = lastBook.getBoundingClientRect(); // Get position of the last book
-//         const windowHeight = window.innerHeight; // Get the window height
-
-//         // Check if the last book is above the bottom of the viewport
-//         if (lastBookRect.bottom < windowHeight) {
-//             // Scroll to the bottom of the books container
-//             lastBook.scrollIntoView({ behavior: 'smooth', block: 'end' });
-//         }
-//     }
-// }
-
-// function handleScroll() {
-//     if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200 && !loading) {
-//         console.log('Near bottom, loading more books...'); // Debugging log
-//         fetchBooks(currentPage);
-//     }
-// }
-
-// window.onload = () => {
-//     fetchBooks(currentPage); 
-//     window.addEventListener('scroll', handleScroll); 
-// };
-
+// to clear session when clicked log out
+document.querySelector(".logout").addEventListener('click',()=>{
+    fetch('logout/')
+    .then(response => {
+      if(!response.ok){
+        throw new Error("Some error occured while logging out!");
+      }
+      console.log(response.json())
+    })
+    .catch(Error =>{
+      console.log("Error : ",Error)
+    });
+  })

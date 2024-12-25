@@ -15,6 +15,7 @@
     <div id="header-div">
         <h1 id="header-title" class="indie-flower-regular">SHELF SENSE</h1>
         <p>Discover your next favorite read with ShelfSense – where every book finds its perfect reader.</p>
+        <a href="{%url "login" %}"><div class="logout">LOG OUT!</div></a>
     </div>
 </header>
 <nav id="nav-genre">
@@ -33,7 +34,7 @@
     <a href="{% url "Genre" genre='NonFiction' %}"><span class="genre">Non-fiction</span></a>
     <a href="{% url "Genre" genre='Romance' %}"><span class="genre">Romance</span></a>
     <a href="{% url "Genre" genre='Science Fiction' %}"><span class="genre">Science Fiction</span></a>
-    <a href="{% url "Genre" genre='All Books' %}"><span class="genre search-nav" style="border: solid 2px">Search</span></a>
+    <a href="{% url "search" %}"><span class="genre search-nav" style="border: solid 2px">Search</span></a>
 </nav>
 <div id="gmb">
     <div id="gmrt">

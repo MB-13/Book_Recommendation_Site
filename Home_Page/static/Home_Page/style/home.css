@@ -34,6 +34,7 @@ body::-webkit-scrollbar{
     background-size: contain;
     border-radius: 6px;
     box-shadow: 0 0 5rem 0 #926947;
+    position: relative;
 }
 
 #header-title{
@@ -49,6 +50,30 @@ body::-webkit-scrollbar{
     font-weight: 600;
     position: relative;
     top: -1rem;
+}
+
+.logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 10rem;
+    text-align: center;
+    position: absolute;
+    z-index: 15;
+    top: 2rem;
+    right: 1rem;
+    padding: 1rem;
+    border: 2px solid #664032 ;
+    background-color: rgba(0, 0, 0, 0.53);
+    color: whitesmoke;
+    border-radius: 15px;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.logout:hover{
+    background-color: black;
 }
 
 #main-body{
@@ -133,31 +158,27 @@ body::-webkit-scrollbar{
     text-shadow: 2px 4px 4px rgba(177, 124, 93, 0.636);
 }
 
-.container-body-1::-webkit-scrollbar{
-    display: none;
-}
-.container-body-2::-webkit-scrollbar{
+.container-body::-webkit-scrollbar{
     display: none;
 }
 
-.container-body-1,.container-body-2{
+
+.container-body{
     height: 100%;
     width: 100%;
     margin-top: 0.5rem;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-behavior: smooth;
 }
-.container-body-1 .card-box{
+
+.container-body .card-box{
     margin-right: 0.6rem;
 }
 
-.container-body-2 .card-box{
-    margin-right: 0.6rem;
-}
 
 .card-box{
     width: 100%;
@@ -166,7 +187,7 @@ body::-webkit-scrollbar{
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    padding: 0.25rem;
+    padding: 0.4rem;
 }
 
 .card-box img{
@@ -204,6 +225,33 @@ body::-webkit-scrollbar{
     column-gap: 1.27rem;
     padding: 0 0.8rem 0 0.8rem;
     
+}
+
+.plus-span,.cross-span{
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 4;
+    left: 88%;
+    transform: translateY(-100%);
+    left: 95%;
+}
+
+.pm-div .linear_span{
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 4;
+    /* left: 88%; */
+    transform: translateY(-1070%);
+    left: 88%;
+}
+
+.pm-div span svg{
+    height: 1rem;
+    width: 1rem;
 }
 
 

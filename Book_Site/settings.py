@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "Home_Page",
     "Genre_Page",
     "Book_Detail_Page",
+    "Search_Page",
 ]
 
 MIDDLEWARE = [
@@ -126,7 +127,15 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+# Add the global static folder to STATICFILES_DIRS
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # Your global static folder
+]
+
+# Directory where collected static files will be stored
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -141,3 +150,9 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'b04mahavir@gmail.com'
 EMAIL_HOST_PASSWORD = 'iiessmiflmhghsfz'
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+
+
+
+

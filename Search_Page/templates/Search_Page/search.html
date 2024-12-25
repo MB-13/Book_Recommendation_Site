@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}ShelfSense{% endblock title %}
+
+{% block head %}
+{% endblock head %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static "Search_Page/style/search.css" %}">
+{% endblock stylesheet %}
+
+{% block content %}
+<header>
+    <div id="header-div">
+        <h1 id="header-title" class="indie-flower-regular">SHELF SENSE</h1>
+        <p>Discover your next favorite read with ShelfSense – where every book finds its perfect reader.</p>
+        <a href="{%url "login" %}"><div class="logout">LOG OUT!</div></a>
+    </div>
+</header>
+<nav id="nav-genre">
+    <a href="{% url "home" %}"><span class="genre">Home</span></a>
+    <a href="{% url "Genre" genre='All Books' %}"><span class="genre">All</span></a>
+    <a href="{% url "Genre" genre='Biography' %}"><span class="genre">Biography</span></a>
+    <a href="{% url "Genre" genre='Children' %}"><span class="genre">Children</span></a>
+    <a href="{% url "Genre" genre='Crime' %}"><span class="genre">Crime</span></a>
+    <a href="{% url "Genre" genre='Fantasy' %}"><span class="genre">Fantasy</span></a>
+    <a href="{% url "Genre" genre='Fiction' %}"><span class="genre">Fiction</span></a>
+    <a href="{% url "Genre" genre='History' %}"><span class="genre">History</span></a>
+    <a href="{% url "Genre" genre='Horror' %}"><span class="genre">Horror</span></a>
+    <a href="{% url "Genre" genre='Humor' %}"><span class="genre">Humor</span></a>
+    <a href="{% url "Genre" genre='Mystery' %}"><span class="genre">Mystery</span></a>
+    <a href="{% url "Genre" genre='Novels' %}"><span class="genre">Novels</span></a>
+    <a href="{% url "Genre" genre='NonFiction' %}"><span class="genre">Non-fiction</span></a>
+    <a href="{% url "Genre" genre='Romance' %}"><span class="genre">Romance</span></a>
+    <a href="{% url "Genre" genre='Science Fiction' %}"><span class="genre">Science Fiction</span></a>
+    <a href="{% url "Genre" genre='All Books' %}"><span class="genre search-nav" style="border: solid 2px">Search</span></a>
+</nav>
+
+<div class="search-section">
+
+    <div class="main_container_1">
+        <div class="search-bar-div">
+            <div class="search-bar">
+                <div class="form-div">
+                    <input id="search-input-field" type="text" placeholder="Search a Book" spellcheck="false" oninput="getSuggestions(this.value)">
+                    <button id="search-btn" class="btn" ><img src="{% static 'Search_Page/images/search.png' %}"></button>
+                </div>
+                <div id="suggestions" class="suggestions-dropdown">
+                    <ul id="suggestions-ul">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-div">
+            <div class="result-title">
+                Search Result For  :-  <span class="search-query result-title" style="font-style:italic;color:#5c3d2e;font-weight:700"></span>
+            </div>
+            <div class="result-cont">
+
+
+                {% comment %} <div class="pm-div">
+                    <a href="{% url "book" Id=book.id %}">
+                        <div class="card-box">
+                            <img src="{{book.Cover_url}}" alt="{{book.Title}}">
+                        </div>
+                    </a>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" id="Plus">
+                            <path d="M3 0v3H0v2h3v3h2V5h3V3H5V0H3z" fill="#595bd4" class="color000000 svgShape"></path>
+                        </svg>                                         
+                    </span>
+                </div> {% endcomment %}
+
+
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+{% endblock content %}
+
+{% block scriptFiles %}
+    <script src="{% static "Search_Page/script/search.js" %}"></script>
+    
+{% endblock scriptFiles %}

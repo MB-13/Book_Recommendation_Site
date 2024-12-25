@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% comment %} <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> {% endcomment %}
+    <link rel="shortcut icon" href="{% static 'images/icon.png' %}" type="image/x-icon">
     <title>{% block title %}{% endblock title %}</title>
     {% block head %}{% endblock head %}
     {% block stylesheet %}{% endblock stylesheet %}
