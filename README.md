@@ -5,9 +5,9 @@ Welcome to the **Book Recommendation Site** repository! This project is a full-s
 ### 🖼 Images:
 Add screenshots of your site in this section to showcase its functionality and design.
 
-<img src="demo/Screenshot (7).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/> <img src="demo/Screenshot (8).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/>
+<p><img src="demo/Screenshot (7).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/> <img src="demo/Screenshot (8).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/></p>
 
-<img src="demo/Screenshot (9).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/> <img src="demo/Screenshot (10).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/>
+<p><img src="demo/Screenshot (9).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/> <img src="demo/Screenshot (10).png" alt="Screenshot 1" style="width:50%; max-width:600px;"/></p>
 
 
 ---
