@@ -121,6 +121,7 @@ Book_Site/
 ## 🎥 Demo
 
 [Watch the video](demo/Demo-video.mp4)
+[View Installation Demo](https://github.com/MB-13/Book_Recommendation_Site#Demo)
 
 https://github.com/user-attachments/assets/e2adbbd8-812b-4f89-9981-7d61fd7e583a
 
